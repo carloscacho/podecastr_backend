@@ -149,10 +149,10 @@ const EpisodeSchema = new mongoose.Schema({
 })
 
 
-module.exports = mongoose.model("Episode", EpisodeSchema);
+// module.exports = mongoose.model("Episode", EpisodeSchema);
 
-// episode.collection.insertMany(data, (err, r) => {
-//     console.log(err  || r.insertedCount)
-// })
+episode.collection.insertMany(data, (err, r) => {
+    console.log(err  || r.insertedCount)
+})
 
-// module.exports  = episode;
+module.exports  = episode;
