@@ -10,7 +10,7 @@ class App {
     this.middlewares();
     this.routes();
 
-    const port = 3003;
+    const port = process.env.PORT || 3003;
 
     this.express.listen(port, () => 
       console.log(`Sua API REST está funcionando na porta ${port} `)
