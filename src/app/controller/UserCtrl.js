@@ -12,7 +12,7 @@ class UserCtrl {
   async login(req, res) {
     const data = await User.findOne({"assign": req.body.assign});
 
-    if(data != null){
+    if(data != null && data.email === req.body.email) {
       const token = jwt.sign({id: data._id}, process.env.SECRET_KEY, {
         expiresIn: 60 * 60 * 24
       })
