@@ -12,9 +12,9 @@ class App {
 
     const port = process.env.PORT || 3003;
 
-    this.express.listen(port, () => 
+    this.express.listen(port, () => {
       console.log(`Sua API REST está funcionando na porta ${port} `)
-    )
+    });
   }
 
   database() {
